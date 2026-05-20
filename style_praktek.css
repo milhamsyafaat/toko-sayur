@@ -1,0 +1,768 @@
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 100; 
+  background-color: #ffffff;
+  border-bottom: 1px solid #e5e7eb;
+  padding: 0 5%;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.07);
+}
+
+.logo {
+  font-weight: 700;
+  font-size: 1.05rem;
+  color: #16a34a;
+}
+
+.nav-links {
+  display: flex;
+  gap: 28px;
+}
+
+.nav-links a {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #1f2937;
+  transition: color 0.2s;
+}
+
+.nav-links a:hover {
+  color: #16a34a;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; 
+}
+
+html {
+  scroll-behavior: smooth; 
+}
+
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  background-color: #f9fafb;
+  color: hsl(215, 28%, 17%);
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+h2 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 8px;
+  color: #1f2937;
+}
+
+.subjudul {
+  text-align: center;
+  color: #6b7280;
+  margin-bottom: 36px;
+}
+
+.tombol {
+  display: inline-block;
+  background-color: #16a34a; 
+  color: #ffffff;
+  padding: 12px 28px;
+  border-radius: 50px; 
+  font-weight: 600;
+  font-size: 0.95rem;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s, transform 0.1s;
+}
+
+.tombol:hover {
+  background-color: #15803d; 
+  transform: translateY(-2px);
+}
+
+.tombol-full {
+  width: 100%;
+  text-align: center;
+}
+
+
+.hero {
+  min-height: calc(100vh - 60px); 
+  padding: 60px 5%;
+  display: flex;
+  align-items: center;
+  gap: 48px;
+  background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%);
+}
+
+.hero-teks {
+  flex: 1;
+}
+
+.hero-teks h1 {
+  font-size: 2.6rem;
+  font-weight: 700;
+  line-height: 1.25;
+  color: #14532d;
+  margin-bottom: 16px;
+}
+
+.hero-teks p {
+  font-size: 1rem;
+  color: #374151;
+  margin-bottom: 28px;
+}
+
+.hero-img {
+  flex: 1;
+  max-width: 460px;
+  border-radius: 20px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
+  object-fit: cover;
+  aspect-ratio: 4/3;
+  background-color: #dcfce7; 
+  min-height: 280px;
+}
+
+
+.section-produk {
+  padding: 72px 5%;
+  background-color: #ffffff;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse; /* Hapus jarak antar border sel */
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.07);
+}
+
+/* Baris header tabel (<thead>) */
+thead tr {
+  background-color: #16a34a;
+  color: #ffffff;
+}
+
+th {
+  padding: 14px 16px;
+  text-align: left;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+/* Sel isi tabel (<td>) */
+td {
+  padding: 14px 16px;
+  border-bottom: 1px solid #e5e7eb;
+  font-size: 0.9rem;
+}
+
+/* Tombol + Tambah di dalam tabel */
+.btn-tambah {
+  background-color: #16a34a;
+  color: #ffffff;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s, transform 0.1s;
+}
+
+.btn-tambah:hover {
+  background-color: #15803d;
+  transform: scale(1.04);
+}
+
+.section-cara-pesan {
+  padding: 72px 5%;
+  background-color: #f0fdf4;
+}
+
+/* Reset numbering <ol> — kita buat styling sendiri */
+.langkah-list {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); 
+  gap: 20px;
+  counter-reset: langkah-counter; 
+}
+
+.langkah-list li {
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 24px 20px;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  counter-increment: langkah-counter; 
+  position: relative;
+}
+
+/* Nomor bulat hijau di atas setiap langkah */
+.langkah-list li::before {
+  content: counter(langkah-counter); 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  background-color: #16a34a;
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 1.1rem;
+  border-radius: 50%;
+  margin: 0 auto 16px;
+}
+
+
+.section-kontak {
+  padding: 72px 5%;
+  background-color: #ffffff;
+}
+
+/* Dua kolom: info toko kiri, form kanan */
+.kontak-wrap {
+  display: grid;
+  grid-template-columns: 1fr 1.4fr;
+  gap: 48px;
+  max-width: 920px;
+  margin: 0 auto;
+}
+
+/* Informasi toko */
+.kontak-info h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #16a34a;
+  margin-bottom: 16px;
+}
+
+.kontak-info ul {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 24px;
+}
+
+.kontak-info li {
+  font-size: 0.92rem;
+  color: #374151;
+}
+
+/* Tombol sosial media */
+.sosmed {
+  display: flex;
+  gap: 10px;
+}
+
+.sosmed a {
+  background-color: #dcfce7;
+  color: #14532d;
+  padding: 6px 14px;
+  border-radius: 50px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  transition: background-color 0.2s;
+}
+
+.sosmed a:hover {
+  background-color: #bbf7d0;
+}
+
+.sosmed a img {
+  width: 32px;
+  height: 32px;
+}
+
+/* Kotak form dengan bayangan */
+#form-kontak {
+  background-color: #f9fafb;
+  padding: 32px;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+}
+
+/* Grup label + input */
+.form-group {
+  margin-bottom: 18px;
+}
+
+.form-group label {
+  display: block;
+  font-size: 0.88rem;
+  font-weight: 600;
+  margin-bottom: 6px;
+  color: #374151;
+}
+
+/* Semua input, textarea dalam form */
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 11px 13px;
+  border: 1.5px solid #e5e7eb;
+  border-radius: 8px;
+  font-family: inherit; /* Ikuti font body */
+  font-size: 0.88rem;
+  color: #1f2937;
+  background-color: #ffffff;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+
+.footer {
+  background-color: #14532d;
+  color: #d1fae5;
+  text-align: center;
+  padding: 32px 5%;
+  font-size: 0.88rem;
+  line-height: 2;
+}
+
+
+/* RESPONSIVE — MEDIA QUERY Tablet (layar ≤ 900px) */
+@media (max-width: 900px) {
+  .langkah-list {
+    grid-template-columns: repeat(2, 1fr); /* 4 kolom → 2 kolom */
+  }
+  .kontak-wrap {
+    grid-template-columns: 1fr; /* 2 kolom → 1 kolom */
+  }
+}
+
+/* Mobile (layar ≤ 700px) */
+@media (max-width: 700px) {
+  .hero {
+    flex-direction: column; /* Hero jadi vertikal */
+    text-align: center;
+    min-height: auto;
+    padding: 40px 5%;
+  }
+  .hero-teks h1 {
+    font-size: 1.8rem;
+  }
+  .nav-links {
+    display: none; /* Sembunyikan menu di HP */
+  }
+  .langkah-list {
+    grid-template-columns: 1fr; /* 1 kolom di HP */
+  }
+}
+
+/* ==========================================================================
+   FITUR JAVASCRIPT: STYLES BARU (Nav Actions, Cart, Theme Toggle, Dark Mode)
+   ========================================================================== */
+
+/* Navbar Actions Wrapper */
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+/* Theme Toggle Button */
+.btn-theme {
+  background: none;
+  border: 1.5px solid #e5e7eb;
+  font-size: 1.2rem;
+  padding: 6px 10px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-theme:hover {
+  transform: scale(1.1);
+  background-color: #f3f4f6;
+  border-color: #16a34a;
+}
+
+/* Cart Button */
+.cart-container {
+  position: relative;
+}
+
+.btn-cart {
+  background-color: #f0fdf4;
+  color: #16a34a;
+  border: 1.5px solid #bbf7d0;
+  padding: 8px 16px;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.btn-cart:hover {
+  background-color: #dcfce7;
+  transform: translateY(-1px);
+}
+
+#cart-count {
+  background-color: #16a34a;
+  color: white;
+  font-size: 0.75rem;
+  padding: 2px 7px;
+  border-radius: 50%;
+  font-weight: 700;
+}
+
+/* Cart Dropdown */
+.cart-dropdown {
+  position: absolute;
+  top: 48px;
+  right: 0;
+  width: 320px;
+  background-color: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  padding: 16px;
+  display: none; /* JS will toggle to flex/block */
+  flex-direction: column;
+  gap: 12px;
+  z-index: 1000;
+  animation: fadeIn 0.2s ease;
+}
+
+.cart-dropdown.show {
+  display: flex;
+}
+
+.cart-dropdown h3 {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #1f2937;
+  border-bottom: 1px solid #f3f4f6;
+  padding-bottom: 8px;
+}
+
+#cart-items {
+  max-height: 200px;
+  overflow-y: auto;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.cart-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 0;
+  border-bottom: 1px dashed #f3f4f6;
+  font-size: 0.85rem;
+}
+
+.cart-item-details {
+  display: flex;
+  flex-direction: column;
+}
+
+.cart-item-name {
+  font-weight: 600;
+  color: #374151;
+}
+
+.cart-item-price {
+  color: #6b7280;
+  font-size: 0.8rem;
+}
+
+.cart-item-qty {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.btn-qty {
+  background-color: #f3f4f6;
+  border: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8rem;
+  color: #374151;
+}
+
+.btn-qty:hover {
+  background-color: #e5e7eb;
+}
+
+.empty-cart {
+  text-align: center;
+  color: #9ca3af;
+  padding: 20px 0;
+  font-size: 0.85rem;
+}
+
+.cart-total {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 700;
+  font-size: 0.95rem;
+  border-top: 1px solid #f3f4f6;
+  padding-top: 10px;
+  color: #1f2937;
+}
+
+#cart-total-price {
+  color: #16a34a;
+}
+
+/* Glassmorphism for Scrolled Navbar */
+.navbar.navbar-scrolled {
+  background-color: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(8px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  height: 55px;
+}
+
+/* Dark Mode Styles Override */
+body.dark-mode {
+  background-color: #111827;
+  color: #f3f4f6;
+}
+
+body.dark-mode .navbar {
+  background-color: #1f2937;
+  border-bottom: 1px solid #374151;
+}
+
+body.dark-mode .navbar.navbar-scrolled {
+  background-color: rgba(31, 41, 55, 0.9);
+}
+
+body.dark-mode .logo {
+  color: #4ade80;
+}
+
+body.dark-mode .nav-links a {
+  color: #d1d5db;
+}
+
+body.dark-mode .nav-links a:hover {
+  color: #4ade80;
+}
+
+body.dark-mode h2 {
+  color: #ffffff;
+}
+
+body.dark-mode .subjudul {
+  color: #9ca3af;
+}
+
+body.dark-mode .section-produk {
+  background-color: #1f2937;
+}
+
+body.dark-mode table {
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.3);
+}
+
+body.dark-mode thead tr {
+  background-color: #15803d;
+}
+
+body.dark-mode td {
+  border-bottom: 1px solid #374151;
+  color: #e5e7eb;
+}
+
+body.dark-mode .section-cara-pesan {
+  background-color: #111827;
+}
+
+body.dark-mode .langkah-list li {
+  background-color: #1f2937;
+  color: #e5e7eb;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+body.dark-mode .langkah-list li p {
+  color: #9ca3af;
+}
+
+body.dark-mode .section-kontak {
+  background-color: #1f2937;
+}
+
+body.dark-mode .kontak-info h3 {
+  color: #4ade80;
+}
+
+body.dark-mode .kontak-info li {
+  color: #d1d5db;
+}
+
+body.dark-mode .sosmed a {
+  background-color: #14532d;
+  color: #4ade80;
+}
+
+body.dark-mode .sosmed a:hover {
+  background-color: #166534;
+}
+
+body.dark-mode #form-kontak {
+  background-color: #111827;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+}
+
+body.dark-mode .form-group label {
+  color: #d1d5db;
+}
+
+body.dark-mode .form-group input,
+body.dark-mode .form-group textarea {
+  background-color: #1f2937;
+  border-color: #374151;
+  color: #ffffff;
+}
+
+body.dark-mode .form-group input::placeholder,
+body.dark-mode .form-group textarea::placeholder {
+  color: #6b7280;
+}
+
+body.dark-mode .footer {
+  background-color: #0f2d1a;
+  color: #a7f3d0;
+}
+
+body.dark-mode .btn-theme {
+  border-color: #4b5563;
+  color: #ffffff;
+}
+
+body.dark-mode .btn-theme:hover {
+  background-color: #374151;
+  border-color: #4ade80;
+}
+
+body.dark-mode .btn-cart {
+  background-color: #064e3b;
+  border-color: #065f46;
+  color: #4ade80;
+}
+
+body.dark-mode .btn-cart:hover {
+  background-color: #065f46;
+}
+
+body.dark-mode .cart-dropdown {
+  background-color: #1f2937;
+  border-color: #374151;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+}
+
+body.dark-mode .cart-dropdown h3 {
+  color: #ffffff;
+  border-bottom-color: #374151;
+}
+
+body.dark-mode .cart-item {
+  border-bottom-color: #374151;
+}
+
+body.dark-mode .cart-item-name {
+  color: #e5e7eb;
+}
+
+body.dark-mode .cart-item-price {
+  color: #9ca3af;
+}
+
+body.dark-mode .btn-qty {
+  background-color: #374151;
+  color: #ffffff;
+}
+
+body.dark-mode .btn-qty:hover {
+  background-color: #4b5563;
+}
+
+body.dark-mode .cart-total {
+  border-top-color: #374151;
+  color: #ffffff;
+}
+
+body.dark-mode #cart-total-price {
+  color: #4ade80;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Custom Toast Notification untuk Pesan Terkirim */
+.toast-notif {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #16a34a;
+  color: #ffffff;
+  padding: 16px 24px;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(22, 163, 74, 0.2);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  z-index: 10000;
+  font-weight: 600;
+  font-size: 0.95rem;
+  transform: translateY(100px);
+  opacity: 0;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.toast-notif.show {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.toast-icon {
+  font-size: 1.4rem;
+}
+
